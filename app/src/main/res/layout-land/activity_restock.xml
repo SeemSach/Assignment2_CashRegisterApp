@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Code Written By: Seema Shabadi 23/11/2022 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".RestockActivity"
+android:layout_centerHorizontal="true"
+
+android:layout_gravity="center"
+
+>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+     android:layout_centerVertical="true"
+        android:id="@+id/product_purchase_Relative">
+    <TextView
+        android:id="@+id/restockProd_Type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/landscape_product_type"
+        android:textSize="22sp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"/>
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/restock_new_qty"
+        android:hint="@string/enter_new_quantity"
+        android:textSize="22sp"
+        android:layout_below="@id/restockProd_Type"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:inputType="number"
+        android:importantForAutofill="no" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/restock_new_qty"
+        android:id="@+id/ok_cancel_Relative">
+
+    <Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/ok_btn"
+    android:text="@string/ok"
+    android:textSize="22sp"
+
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+
+
+    />
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/cancel_btn"
+    android:text="@string/cancel"
+    android:textSize="22sp"
+    android:layout_toEndOf="@id/ok_btn"
+
+    android:layout_marginTop="20dp"
+
+    />
+    </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/product_purchase_Relative"
+        android:id="@+id/product_details_Relative">
+    <TextView
+        android:id="@+id/selectProduct_restockTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:textColor="@color/black"
+        android:text= "@string/select_product_to_re_stock"
+        android:textSize="24sp"
+
+
+         />
+    <ListView
+        android:id="@+id/restockProduct_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/selectProduct_restockTextView"
+         />
+    </RelativeLayout>
+</RelativeLayout>
